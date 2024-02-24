@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
                             nowDate >=  birthdayDate && nowMonth < birthdayMonth ? 12 + nowMonth - birthdayMonth :
                             nowMonth - birthdayMonth;
 
-        const yearsPassed = nowMonth === birthdayMonth && nowDate === birthdayDate ? nowYear - birthdayYear : nowYear - birthdayYear - 1;
+        const yearsPassed = nowMonth > monthsPassed ? nowYear - birthdayYear : nowYear - birthdayYear - 1;
         
         function countTimeDigits({allowStopCounter = false, setAllDigitsWidth = false, finishTime, elem}){
 
